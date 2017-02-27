@@ -28,9 +28,9 @@ class Stack<T>{
 }
 
 class Solution {
+    let left = ["(".characters.first!,"[".characters.first!,"{".characters.first!]
+    let right = [")".characters.first!,"]".characters.first!,"}".characters.first!]
     func isValid(_ s: String) -> Bool {
-        let left = ["(".characters.first!,"[".characters.first!,"{".characters.first!]
-        let right = [")".characters.first!,"]".characters.first!,"}".characters.first!]
         let stack = Stack<Character>()
         for character in s.characters {
             if left.contains(character) {
